@@ -1,9 +1,9 @@
 import "./Button.css"
 
-const Button = () => {
+const Button = (props) => {
     return (
-        <button className="button">
-            Button
+        <button className="button" onClick={props.handleClick}>
+            {props.label}
         </button>
     )
 
