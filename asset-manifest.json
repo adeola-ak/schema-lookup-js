@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/schema-lookup-js/static/css/main.79d36a19.chunk.css",
+    "main.js": "/schema-lookup-js/static/js/main.dea6f8dd.chunk.js",
+    "main.js.map": "/schema-lookup-js/static/js/main.dea6f8dd.chunk.js.map",
+    "runtime-main.js": "/schema-lookup-js/static/js/runtime-main.a803f86b.js",
+    "runtime-main.js.map": "/schema-lookup-js/static/js/runtime-main.a803f86b.js.map",
+    "static/js/2.b2a29579.chunk.js": "/schema-lookup-js/static/js/2.b2a29579.chunk.js",
+    "static/js/2.b2a29579.chunk.js.map": "/schema-lookup-js/static/js/2.b2a29579.chunk.js.map",
+    "static/js/3.9c2c1846.chunk.js": "/schema-lookup-js/static/js/3.9c2c1846.chunk.js",
+    "static/js/3.9c2c1846.chunk.js.map": "/schema-lookup-js/static/js/3.9c2c1846.chunk.js.map",
+    "index.html": "/schema-lookup-js/index.html",
+    "static/css/main.79d36a19.chunk.css.map": "/schema-lookup-js/static/css/main.79d36a19.chunk.css.map",
+    "static/js/2.b2a29579.chunk.js.LICENSE.txt": "/schema-lookup-js/static/js/2.b2a29579.chunk.js.LICENSE.txt",
+    "static/media/Sourcegraph_Logo_light.66076257.png": "/schema-lookup-js/static/media/Sourcegraph_Logo_light.66076257.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a803f86b.js",
+    "static/js/2.b2a29579.chunk.js",
+    "static/css/main.79d36a19.chunk.css",
+    "static/js/main.dea6f8dd.chunk.js"
+  ]
+}
