@@ -32,11 +32,11 @@ function App() {
 
       <div className="button-container">
       <h4>Please choose the file you wish to explore configuration options for</h4>
-      <Button label="site" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/site.schema.json") }/>
-      <Button label="GitHub" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/github.schema.json") }/>
-      <Button label="GitLab" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/gitlab.schema.json") }/>
-      <Button label="Gitolite" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/gitolite.schema.json") }/>
-      <Button label="Changeset" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/changeset_spec.schema.json") }/>
+      <Button label="Site Config" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/site.schema.json") }/>
+      <Button label="GitHub Config" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/github.schema.json") }/>
+      <Button label="GitLab Config" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/gitlab.schema.json") }/>
+      <Button label="Gitolite Config" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/gitolite.schema.json") }/>
+      <Button label="Changeset Config" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/changeset_spec.schema.json") }/>
       </div>
       <Graph options={options}/>
     </div>
