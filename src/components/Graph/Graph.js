@@ -2,34 +2,14 @@ import "./Graph.css"
 import {useEffect, useState} from "react"
 import axios from 'axios';
 
-const Graph = () => {
-
-const [siteConfigOptions, setSiteConfigOptions] = useState() 
-
-useEffect(() => {
-  axios
-      .get("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/site.schema.json", {
-        headers: {
-          "Content-Type": "application/json"
-        },
-      })
-      .then(response => {
-        console.log(response.data.properties);
-        setSiteConfigOptions(response.data.properties);
-              })
-      .catch(ex => {
-        const error =
-        ex.response.status === 404
-          ? "Resource Not found"
-          : "An unexpected error has occurred";
-      });
-
-  }, []);
+const Graph = (props) => {
+    let hasOptions=""
+    if (props.options) hasOptions = Object.entries(props.options).map(([key, value]) => { return <div><h6>{key}</h6> <p>{value.description}</p> <p>{value.type}</p> <p>{value.group}</p></div>} )
 
     return (
-<div>HI</div>
+        <div>
+{hasOptions}</div>
     )
-
     }
 
 export default Graph;
