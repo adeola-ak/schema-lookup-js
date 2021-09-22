@@ -1,8 +1,7 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
 import axios from "axios"
-import Graph from "./components/Graph/Graph"
+import Table from "./components/Table/Table"
 import Button from "./components/Button/Button"
-
 import logo_light from "./assets/Sourcegraph_Logo_light.png"
 import './App.css';
 
@@ -15,14 +14,18 @@ function App() {
       .get(url)
        .then(response => setOptions(response.data))
        .catch(error => {console.log(error);})
-        console.log(options);
-        console.log(options);
-
       };
     
   const handleGetJson = (url) => {
     apiCall(url);
   }
+
+
+  useEffect ( () => {
+    if (!options) {
+      console.log("loading...");
+    }
+   }, [])
 
   return (
     <div className="App">
@@ -40,26 +43,9 @@ function App() {
       <Button label="Gitolite Config" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/gitolite.schema.json") }/>
       <Button label="Changeset Config" handleClick={() => handleGetJson("https://raw.githubusercontent.com/sourcegraph/sourcegraph/main/schema/changeset_spec.schema.json") }/>
       </div>
-      <Graph options={options}/>
+      <Table options={options}/>
     </div>
   );
 }
 
 export default App;
-
-
-
-// signs: {
-//   adeola: {
-//     sun: cancer,
-//     moon: test,
-//     rising: test 
-//   },
-//   vonte: {
-//     sun: virgo,
-//     moon: test,
-//     rising: test
-//   },
-
-
-// }
