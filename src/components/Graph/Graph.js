@@ -1,14 +1,12 @@
 
 import "./Graph.css"
-import {useEffect, useState} from "react"
-import axios from 'axios';
 
 const Graph = (props) => {
     let hasOptions=""
-    if (props.options) hasOptions = Object.entries(props.options).map(([key, value]) => { 
+    if (props.options) hasOptions = Object.entries(props.options.properties).map(([key, value]) => {
         return (
         <tr>
-            <td>{key}</td>
+        <td>{key}</td>
          <td>{value.description}</td> 
         <td>{value.type}</td> 
         <td>{value.group}</td>
@@ -17,7 +15,8 @@ const Graph = (props) => {
 
     return (
         <div>
-            <table>
+            <table id="options">
+                {/* <thead><tr>hi</tr></thead> */}
                 <tbody>
                     {hasOptions}
                 </tbody>

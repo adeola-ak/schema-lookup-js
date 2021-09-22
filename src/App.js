@@ -13,9 +13,11 @@ function App() {
   const apiCall = (url) => {
     axios
       .get(url)
-       .then(response => setOptions(response.data.properties))
+       .then(response => setOptions(response.data))
        .catch(error => {console.log(error);})
         console.log(options);
+        console.log(options);
+
       };
     
   const handleGetJson = (url) => {
@@ -44,3 +46,20 @@ function App() {
 }
 
 export default App;
+
+
+
+// signs: {
+//   adeola: {
+//     sun: cancer,
+//     moon: test,
+//     rising: test 
+//   },
+//   vonte: {
+//     sun: virgo,
+//     moon: test,
+//     rising: test
+//   },
+
+
+// }
