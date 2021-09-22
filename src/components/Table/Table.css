@@ -6,7 +6,11 @@
     width: 100%;
 }
 
-#options td, #students th {
+thead {
+  font-weight: bold;
+}
+
+#options td, #options th {
     border: 1px solid #ddd;
     padding: 8px;
   }

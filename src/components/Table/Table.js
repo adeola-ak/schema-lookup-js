@@ -13,16 +13,19 @@ const Table = (props) => {
         <td>{value.group}</td>
         </tr>
     )})
-
     //changeset data is sctructured dofferently and needs to be mapped differently. still unsure of this data
-    if (props.options && props.options.oneOf) changesetOptions = Object.entries(props.options.oneOf).map(([key, value]) => {
-        return (
-            <tr>
-        <td>1</td>
-        <td>2</td> 
-        <td>3</td> 
-            </tr>
-        )
+    if (props.options && props.options.oneOf) changesetOptions = Object.entries(props.options.oneOf).map(([k, v]) => {
+        return Object.entries(v.properties).map(([key, value]) => {
+            return (
+                <tr>
+            <td>{key}</td>
+            <td>{value.description}</td> 
+            <td>{value.type}</td> 
+            <td>{k}</td>
+                </tr>
+            )  
+        })
+        
     })
 
     return (

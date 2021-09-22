@@ -20,7 +20,6 @@ function App() {
     apiCall(url);
   }
 
-
   useEffect ( () => {
     if (!options) {
       console.log("loading...");
